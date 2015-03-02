@@ -3,37 +3,57 @@
 
 // Create canvis
 
-size(700, 600);
-background(0, 0, 200);
-stroke(255);
-strokeWeight(2);
+void setup() {
+  size(700, 600);
+}
 
-line(350, 100, 300, 250);
-line(300, 250, 250, 200);
-line(250, 200, 250, 300);
-line(250, 300, 200, 250);
-line(200, 250, 200, 300);
-line(200, 300, 150, 275);
-line(150, 275, 200, 350);
-line(200, 350, 150, 325);
-line(150, 325, 250, 450);
-line(250, 450, 200, 500);
-line(200, 500, 325, 450);
-line(325, 450, 325, 550);
-line(325, 550, 375, 550);
-line(375, 550, 375, 450);
-line(375, 450, 500, 500);
-line(500, 500, 450, 450);
-line(450, 450, 550, 325);
-line(550, 325, 500, 350);
-line(500, 350, 550, 275);
-line(550, 275, 500, 300);
-line(500, 300, 500, 250);
-line(500, 250, 450, 300);
-line(450, 300, 450, 200);
-line(450, 200, 400, 250);
-line(400, 250, 350, 100);
-textSize(32);
-text("Toronto", 290, 300);
-text("Maple", 310, 350);
-text("Leafs", 320, 400);
+void draw() {
+
+  // draw logo
+  background(255);
+  stroke(255);
+  strokeWeight(2);
+  fill(46, 93, 255);
+  beginShape();
+  vertex(350, 100);
+  vertex(300, 250);
+  vertex(250, 200);
+  vertex(250, 300);
+  vertex(200, 250);
+  vertex(200, 300);
+  vertex(150, 275);
+  vertex(200, 350);
+  vertex(150, 340);
+  vertex(230, 445);
+  vertex(210, 500); //
+  vertex(340, 450);
+  vertex(340, 550);
+  vertex(360, 550);
+  vertex(360, 450);
+  vertex(490, 500);
+  vertex(470, 450);
+  vertex(550, 340);
+  vertex(500, 345);
+  vertex(550, 275); //
+  vertex(500, 300);
+  vertex(500, 250);
+  vertex(450, 300);
+  vertex(450, 200);
+  vertex(400, 250);
+  vertex(350, 100);
+  endShape();
+
+  fill(255);
+  textSize(35);
+  text("Toronto", 275, 320);
+  text("Maple", 293, 370);
+  text("Leafs", 300, 420);
+  
+  // draw a mouse point with co-ordinates showing
+  textSize(12);
+  fill(0);
+  text("X is: " + mouseX, mouseX, mouseY);
+  text("Y is: " + mouseY, mouseX, mouseY +10);
+  
+  
+}
